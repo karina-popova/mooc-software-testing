@@ -36,4 +36,23 @@ public class RomanNumeralTestWithBeforeEach {
         int result = roman.convert("XLIV");
         Assertions.assertEquals(44, result);
     }
-}
+
+    @Test
+    public void numberWhenAddingNumber() {
+        int result = roman.convert("XXV");
+        Assertions.assertEquals(25, result);
+    }
+
+    @Test
+    public void numberWhenSubtractNumber () {
+        int result = roman.convert("XXIX");
+        Assertions.assertEquals(29, result);
+    }
+
+    @Test
+    public void numberWithI () {
+        int result = roman.convert( "VI");
+        Assertions.assertEquals(6, result);
+    }
+
+    }

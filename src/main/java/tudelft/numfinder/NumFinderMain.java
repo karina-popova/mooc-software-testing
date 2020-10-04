@@ -6,10 +6,10 @@ public class NumFinderMain {
         NumFinder nf = new NumFinder();
 
         // this works
-        // nf.find(new int[] {4, 25, 7, 9});
+         nf.find(new int[] {0, 25, 7, 19});
 
         // this crashes
-        nf.find(new int[] {4, 3, 2, 1});
+       // nf.find(new int[] {7, 6, 5, 4});
 
         System.out.println(nf.getLargest());
         System.out.println(nf.getSmallest());
