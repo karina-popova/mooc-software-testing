@@ -3,16 +3,20 @@ package tudelft.ghappy;
 public class GHappy {
 
     public boolean gHappy(String str) {
-        assert str!=null;
-        for(int i = 0; i < str.length(); i++) {
-            if(str.charAt(i) == 'g') {
-                if (i >= 0 && str.charAt(i-1) == 'g') { continue; }
-                if (i+1 < str.length() && str.charAt(i+1) == 'g') { continue; }
-                return false;
+        int len = str.length();
+        boolean happy = true;
+
+        for (int i = 0; i < len; i++) {
+            if (str.charAt(i) == 'g') {
+                if (i > 0 && str.charAt(i - 1) == 'g')
+                    happy = true;
+                else if (i > len - 1 && str.charAt(i + 1) == 'g')
+                    happy = true;
+                else
+                    happy = false;
             }
         }
 
-        return true;
+        return happy;
+    }}
 
-    }
-}
